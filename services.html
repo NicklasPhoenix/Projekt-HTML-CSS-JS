@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="main.html">
+          <img src="logo.png" alt="Your Logo" />
+        </a>
+      </div>
+      <nav>
+          <div class="nav-links">
+        <a href="main.html">About Me</a>
+        <a href="services.html">Services</a>
+        <a href="contactme.html">Contact Me</a>
+          </div>
+          <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+          </div>
+      </nav>
+  </header>
+    <main>
+      <section id="services">
+        <div class="services-container">
+          <div class="service-card" style="background-image: url('zoho_crm.jpg');">
+            <div class="service-content">
+              <h3>Consulting Zoho CRM</h3>
+              <p>50€ per hour</p>
+              <a href="#" class="book-btn" onclick="bookService('Consulting Zoho CRM')">Book Now</a>
+            </div>
+          </div>
+          <div class="service-card" style="background-image: url('excel_help.jpg');">
+            <div class="service-content">
+              <h3>Excel Help</h3>
+              <p>15€ per hour</p>
+              <a href="#" class="book-btn" onclick="bookService('Excel Help')">Book Now</a>
+            </div>
+          </div> 
+          <div class="service-card" style="background-image: url('ETF_investing.jpg');">
+            <div class="service-content">
+              <h3>ETF investing</h3>
+              <p>20€ per hour</p>
+              <a href="#" class="book-btn" onclick="bookService('ETF investing')">Book Now</a>
+            </div>
+          </div>   
+          <div class="service-card" style="background-image: url('Webdesign_help.jpg');">
+            <div class="service-content">
+              <h3>Webdesign</h3>
+              <p>30€ per hour</p>
+              <a href="#" class="book-btn" onclick="bookService('Webdesign')">Book Now</a>
+            </div>
+          </div>                 
+        </div>        
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Nick Consulting</p>
+    </footer>
+    <script src="burger.js"></script>
+    <script>
+      function bookService(serviceName) {
+        const emailAddress = 'nicklas@soundpound.de';
+        const subject = `Booking request for ${serviceName}`;
+        const body = `Hi Nicklas,
+    
+    I would like to book your ${serviceName} service. Please get in touch with me to discuss further details.
+    
+    Best regards,
+    [Your Name]`;
+    
+        window.location.href = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      }
+    </script>
+    
+  </body>
+</html>
+
+
+
+
+
+
